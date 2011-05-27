@@ -1,8 +1,8 @@
-require File.join(File.dirname(__FILE__), '..', 'app_store')
-require 'rubygems'
-require 'shoulda'
-require 'matchy'
-require 'fakeweb'
+require File.join(File.dirname(__FILE__), '../lib', 'app_store')
+
+require "rubygems"
+require "bundler"
+Bundler.require(:default, :development)
 
 FakeWeb.allow_net_connect = false
 
