@@ -79,7 +79,7 @@ module AppStore
 
   private  
   def request(url, params={}, store='143441')
-    @agent ||= WWW::Mechanize.new { |a| a.user_agent = 'iTunes-iPhone/3.0' }
+    @agent ||= Mechanize.new { |a| a.user_agent = 'iTunes-iPhone/3.0' }
     @agent.get(:url => url, :headers => {"X-Apple-Store-Front" => "#{store}-1,2"}, :params => params)
   end
 end
